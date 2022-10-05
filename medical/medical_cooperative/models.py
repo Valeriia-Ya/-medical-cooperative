@@ -18,3 +18,8 @@ class db_medicines(models.Model):
     instructions = models.CharField(max_length=1000)
     intended_action = models.CharField(max_length=500)
     side_effects = models.CharField(max_length=500)
+
+
+class Doctors(models.Model):
+    name = models.CharField(max_length=50)
+    specialization = models.CharField(max_length=50)
