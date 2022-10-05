@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <title>База лекарств</title>
+    <style>
+        body {
+            font-family: 'Century Gothic';
+        }
+        .navbar-brand {
+            font-size: 40pt;
+        }
+        .navbar {
+            background: linear-gradient(180deg, #A7CECC, #FFFFFF);
+        }
+        .navbar-b {
+            background: linear-gradient(360deg, #A7CECC, #FFFFFF);
+            font-size: 40pt;
+            color: #FFFFFF;
+        }
+        .btn-ex {
+            font-size: 36pt;
+            background-color: transparent;
+            border: none;
+            color: red;
+        }
+        .card {
+            border-color: #A7CECC;
+            border-width: 2pt;
+            font-size: 13pt
+        }
+    </style>
+</head>
+<body>
+    {% load static %}
+    {% block content %}
+    <nav class="navbar p-3 pb-5">
+        <div class="navbar-brand">
+            <a href="/medical_cooperative/home"><img src="{% static 'images/icon.png' %}" alt="" width="60" height="60" class="d-inline-block align-text-top"></a>
+            Круглова Анна Егоровна
+        </div>
+        <button type="button" class="btn btn-outline-danger btn-lg float-end">Выйти</button>
+    </nav>
+    <div class="text-center pt-3"><a href="#" class="btn btn-primary btn-lg">Добавить новое лекарство</a></div>
+    <div class="content p-2">
+        <div class="row pb-4 p-3">
+
+            <div class="col-sm-4 pb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text"><b>Название лекарства:</b>  </p>
+                        <p class="card-text"><b>Инструкция по применению:</b>  </p>
+                        <p class="card-text"><b>Предполагаемое действие:</b>  </p>
+                        <p class="card-text"><b>Возможные побочные эффекты</b>  </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-4 pb-3">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text"><b>Название лекарства:</b>  </p>
+                        <p class="card-text"><b>Инструкция по применению:</b>  </p>
+                        <p class="card-text"><b>Предполагаемое действие:</b>  </p>
+                        <p class="card-text"><b>Возможные побочные эффекты</b>  </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar-b fixed-bottom p-3 pt-6 d-flex align-items-center justify-content-center">
+        <div><h1>История болезни Online</h1></div>
+    </nav>
+    {% endblock %}
+</body>
+</html>

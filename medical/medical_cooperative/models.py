@@ -11,3 +11,4 @@ class Inspections(models.Model):
     diagnosis = models.CharField(max_length=500)
     appointment = models.CharField(max_length=500)
     doctor = models.CharField(max_length=50)
+

@@ -10,3 +10,7 @@ def home(request):
 def inspections(request):
     info = Inspections.objects.all()
     return render(request, 'inspections.html', {'info': info})
+
+
+def medicines(request):
+    return render(request, 'medicines.html')
