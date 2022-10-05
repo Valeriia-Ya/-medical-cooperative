@@ -48,29 +48,18 @@
     <div class="text-center pt-3"><a href="#" class="btn btn-primary btn-lg">Добавить новое лекарство</a></div>
     <div class="content p-2">
         <div class="row pb-4 p-3">
-
+            {% for i in info %}
             <div class="col-sm-4 pb-3">
                 <div class="card">
                     <div class="card-body">
-                        <p class="card-text"><b>Название лекарства:</b>  </p>
-                        <p class="card-text"><b>Инструкция по применению:</b>  </p>
-                        <p class="card-text"><b>Предполагаемое действие:</b>  </p>
-                        <p class="card-text"><b>Возможные побочные эффекты</b>  </p>
+                        <p class="card-text"><b>Название лекарства:</b> {{ i.name }} </p>
+                        <p class="card-text"><b>Инструкция по применению:</b> {{ i.instructions }} </p>
+                        <p class="card-text"><b>Предполагаемое действие:</b> {{ i.intended_action }} </p>
+                        <p class="card-text"><b>Возможные побочные эффекты</b> {{ i.side_effects }} </p>
                     </div>
                 </div>
             </div>
-
-
-            <div class="col-sm-4 pb-3">
-                <div class="card">
-                    <div class="card-body">
-                        <p class="card-text"><b>Название лекарства:</b>  </p>
-                        <p class="card-text"><b>Инструкция по применению:</b>  </p>
-                        <p class="card-text"><b>Предполагаемое действие:</b>  </p>
-                        <p class="card-text"><b>Возможные побочные эффекты</b>  </p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
     <nav class="navbar-b fixed-bottom p-3 pt-6 d-flex align-items-center justify-content-center">

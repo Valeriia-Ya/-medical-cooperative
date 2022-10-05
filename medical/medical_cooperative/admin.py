@@ -1,5 +1,6 @@
 from django.contrib import admin
 from medical_cooperative.models import Inspections
+from medical_cooperative.models import db_medicines
 
 # Register your models here.
 class InspectionsAdmin(admin.ModelAdmin):
@@ -15,4 +16,14 @@ class InspectionsAdmin(admin.ModelAdmin):
     ]
 
 
+class db_medicinesAdmin(admin.ModelAdmin):
+    fieldsets = [
+        ('name', {'fields': ['name']}),
+        ('instructions', {'fields': ['instructions']}),
+        ('intended_action', {'fields': ['intended_action']}),
+        ('side_effects', {'fields': ['side_effects']})
+    ]
+
+
 admin.site.register(Inspections, InspectionsAdmin)
+admin.site.register(db_medicines, db_medicinesAdmin)

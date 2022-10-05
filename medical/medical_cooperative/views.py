@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Inspections
+from .models import Inspections, db_medicines
 
 
 # Create your views here.
@@ -13,4 +13,5 @@ def inspections(request):
 
 
 def medicines(request):
-    return render(request, 'medicines.html')
+    info = db_medicines.objects.all()
+    return render(request, 'medicines.html', {'info': info})
