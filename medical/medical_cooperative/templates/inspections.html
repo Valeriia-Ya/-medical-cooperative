@@ -33,6 +33,9 @@
             border-width: 2pt;
             font-size: 13pt
         }
+        #btn{
+           color: red;   
+        }
     </style>
 </head>
 <body>
@@ -46,6 +49,7 @@
         <button type="button" class="btn btn-outline-danger btn-lg float-end">Выйти</button>
     </nav>
     <div class="text-center pt-3"><a href="#" class="btn btn-primary btn-lg">Добавить новый осмотр</a></div>
+    <div id="btn" class="text-center pt-3"><a href="#" class="btn btn-primary btn-lg">Удалить осмотр</a></div>
     <div class="content p-2">
         <div class="row pb-4 p-3">
             {% for i in info %}
