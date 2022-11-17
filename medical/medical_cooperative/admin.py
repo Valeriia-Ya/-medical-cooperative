@@ -1,6 +1,4 @@
 from django.contrib import admin
-<<<<<<< HEAD
-=======
 from medical_cooperative.models import Inspections
 from medical_cooperative.models import db_medicines
 from medical_cooperative.models import Doctors
@@ -38,4 +36,3 @@ class DoctorsAdmin(admin.ModelAdmin):
 admin.site.register(Inspections, InspectionsAdmin)
 admin.site.register(db_medicines, db_medicinesAdmin)
 admin.site.register(Doctors, DoctorsAdmin)
->>>>>>> main
