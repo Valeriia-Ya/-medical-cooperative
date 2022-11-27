@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Inspections, db_medicines, Doctors
 
+pass = "pdct.1.1.20221127T184216Z.7b9c144b5992eb5c.be4a3e2356a92547a1ce82"
 
 # Create your views here.
 def home(request):
