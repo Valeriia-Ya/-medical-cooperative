@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <title>Главная</title>
+    <style>
+        body {
+            font-family: 'Century Gothic';
+        }
+        .navbar-brand {
+            font-size: 40pt;
+        }
+        .navbar {
+            background: linear-gradient(180deg, #A7CECC, #FFFFFF);
+        }
+        .navbar-b {
+            background: linear-gradient(360deg, #A7CECC, #FFFFFF);
+            font-size: 40pt;
+            color: #FFFFFF;
+        }
+        .btn-ex {
+            font-size: 36pt;
+            background-color: transparent;
+            border: none;
+            color: red;
+        }
+        .card {
+            border-color: #A7CECC;
+            border-width: 2pt
+        }
+    </style>
+</head>
+<body>
+    {% load static %}
+    {% block content %}
+    <nav class="navbar p-3 pb-5">
+        <div class="navbar-brand">
+            <img src="{% static 'images/icon.png' %}" alt="" width="60" height="60" class="d-inline-block align-text-top">
+            {{ acc.name }} ({{ acc.specialization }})
+        </div>
+        <button type="button" class="btn btn-outline-danger btn-lg float-end">Выйти</button>
+    </nav>
+    <div class="content p-2">
+        <div class="row pb-4">
+            <div class="col-sm-4 offset-md-2">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-center p-2"><img src="{% static 'images/icon_inspection.png' %}" alt="" width="90" height="90"></p>
+                        <h1 class="card-title text-center p-2">История осмотров</h1>
+                        <div class="text-center pt-3"><a href="/medical_cooperative/inspections" class="btn btn-primary btn-lg">Перейти</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-center p-2"><img src="{% static 'images/icon_medicine.png' %}" alt="" width="90" height="90"></p>
+                        <h1 class="card-title text-center p-2">База лекарств</h1>
+                        <div class="text-center pt-3"><a href="/medical_cooperative/medicines" class="btn btn-primary btn-lg">Перейти</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pb-4">
+            <div class="col-sm-4 offset-md-2">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-center p-2"><img src="{% static 'images/icon_statistics.png' %}" alt="" width="90" height="90"></p>
+                        <h1 class="card-title text-center p-2">Статистика</h1>
+                        <div class="text-center pt-3"><a href="/medical_cooperative/statistics_1" class="btn btn-primary btn-lg">Перейти</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="text-center p-2"><img src="{% static 'images/icon_info.png' %}" alt="" width="90" height="90"></p>
+                        <h1 class="card-title text-center p-2">О программе</h1>
+                        <div class="text-center pt-3"><a href="#" class="btn btn-primary btn-lg">Перейти</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar-b fixed-bottom p-3 pt-6 d-flex align-items-center justify-content-center">
+        <div><h1>История болезни Online</h1></div>
+    </nav>
+    {% endblock %}
+</body>
+</html>
